@@ -1,0 +1,235 @@
+:root{
+    --first-color:rgb(22,35,40);
+    --second-color:rgb(90,99,103);
+    --third-color:rgb(10,120,255);
+    --fourd-color:rgb(253,253,253);
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration: none;
+    font-family: 'Noto Sans', sans-serif;
+    list-style:none;
+}
+.nav-mobile button{
+    font-size:1.5rem;
+}
+h2{
+    font-size:2rem;
+}
+/* NAV */
+body{
+    background:var(--fourd-color);
+}
+header{
+    height:80px;
+    width:100%;
+    background:var(--fourd-color);
+    padding:0 50px;
+    color:var(--fourd-color);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    
+}
+.nav-container{
+    
+    width:100%;
+    justify-content:space-between;
+}
+.nav-mobile button{
+    background:none;
+    border:none;
+    /*font-size:1.5rem; */
+    color:var(--first-color);
+    cursor:pointer;
+    float:right;
+    padding-top: 5px;
+
+}
+.logo{
+    color:var(--third-color);
+    cursor: pointer;
+    float:left;
+    display:flex;
+    position: absolute;
+}
+.nav-list{
+    font-size: 1rem;
+    display:block;
+}
+.nav-list ul li a{
+    display:none;
+    transition:0.3s;
+    margin:0 5px;
+    border-radius:50px;
+    padding:10px 25px;
+    color:var(--second-color);
+}
+.nav-list ul li a:hover{
+    color:var(--main-color);
+    background:var(--third-color);
+}
+/* TERMINA NAV */
+#hero{
+    background-color:var(--fourd-color);
+}
+.hero-container{
+    background-color: var(--fourd-color);
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height:92vh;
+}
+.texto{
+    color:var(--third-color);
+    z-index:2;
+    font-size: 2em;
+}
+.imagen-hero{
+    z-index:1;
+    align-items: center;
+    justify-content:center;
+    background-image: url("/imagenes/test.jpeg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    margin:auto;
+    width:75%;
+    height:50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url("/imagenes/test.jpeg");
+}
+.imagen-hero img{
+    max-width: 100%;
+    max-height:100%;
+}
+.texto p{
+    color:var(--fourd-color);
+    font-size: 1.5rem;
+}
+.localizacion{
+    height:100vh;
+}
+.container-locali{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#gmap{
+    width:100%;
+    border:0;
+}
+.img-locali{
+    width:85%;
+    padding-bottom: 15px;
+    
+}
+.texto-locali h2{
+    color:var(--third-color);
+
+}
+.texto-locali p{
+    color:var(--second-color);
+}
+.container-puntos{
+    display:flex;
+    height:85vh;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+}
+.container-puntos ul li{
+    font-size: 5vmin;
+    padding:1em 0em 1em;
+}
+.container-puntos ul li span{
+    padding-left:15px;
+    color:var(--second-color);
+}
+.container-puntos ul li i{
+    color:var(--third-color);
+}
+footer{
+    height:40px;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color:black ;
+}
+.simplefoot{
+    display:flex;
+    width:100%;
+    justify-content:space-between;
+    padding: 0em 1em 0em;
+    color:white;
+    text-align: center;
+}
+.imgfoot{
+    display:flex;
+    padding-top: 2px;
+}
+.textfoot{
+    display:flex;
+
+}
+@media(min-width:870px){
+    .nav-mobile{
+        display:none;
+    }
+    .nav-list{
+        float:right;
+    }
+    .nav-list ul li a{
+        display:block;
+    }
+    .nav-list ul{
+        display:flex;
+        flex-direction: row;
+    }
+}
+@media(min-width:720px){
+    .container-locali{
+        margin:auto;
+        position: relative;
+        flex-direction: row;
+    }
+    .img-locali{
+        width:45%;
+        display:flex;
+        height:25vw;
+    }
+    .texto-locali{
+        display:flex;
+        align-content: center;
+        text-align:center;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        padding-left:20px;
+        width:45%;
+    }
+    #gmap{
+        height:100%;
+    }
+    .imagen-hero{
+        height:75%;
+    }
+}
