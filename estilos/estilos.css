@@ -80,12 +80,12 @@ header{
 }
 .hero-container{
     background-color: var(--fourd-color);
-    
     display:flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     height:92vh;
+    flex-direction: column;
 }
 .texto{
     color:var(--third-color);
@@ -96,26 +96,13 @@ header{
     z-index:1;
     align-items: center;
     justify-content:center;
-    background-image: url("/imagenes/test.jpeg");
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    margin:auto;
-    width:75%;
-    height:50%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
     border-radius: 8px;
-    
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),url("/imagenes/test.jpeg");
+    padding-bottom: 2rem;
 }
 .imagen-hero img{
-    max-width: 100%;
     max-height:100%;
+    height:auto;
 }
 .texto p{
     color:var(--fourd-color);
